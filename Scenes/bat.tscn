@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://cq73s4fwml8ux"]
+
+[ext_resource type="Texture2D" uid="uid://cdbsf87ailcm1" path="res://Assets/obstacle/bat.png" id="1_j7be8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jckqh"]
+atlas = ExtResource("1_j7be8")
+region = Rect2(0, 0, 46, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wt6c1"]
+atlas = ExtResource("1_j7be8")
+region = Rect2(46, 0, 46, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50dnf"]
+atlas = ExtResource("1_j7be8")
+region = Rect2(92, 0, 46, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mqh3e"]
+atlas = ExtResource("1_j7be8")
+region = Rect2(138, 0, 46, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y36tb"]
+atlas = ExtResource("1_j7be8")
+region = Rect2(184, 0, 46, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cawgt"]
+atlas = ExtResource("1_j7be8")
+region = Rect2(230, 0, 46, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fk7gk"]
+atlas = ExtResource("1_j7be8")
+region = Rect2(276, 0, 46, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c4xfn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jckqh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wt6c1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_50dnf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mqh3e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y36tb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cawgt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fk7gk")
+}],
+"loop": true,
+"name": &"flying",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h8o1q"]
+radius = 8.0
+
+[node name="bat" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_c4xfn")
+animation = &"flying"
+autoplay = "flying"
+frame_progress = 0.1035749
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_h8o1q")
