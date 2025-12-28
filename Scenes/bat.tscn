@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://cq73s4fwml8ux"]
+[gd_scene load_steps=12 format=3 uid="uid://cq73s4fwml8ux"]
 
 [ext_resource type="Texture2D" uid="uid://cdbsf87ailcm1" path="res://Assets/obstacle/bat.png" id="1_j7be8"]
+[ext_resource type="Script" uid="uid://c1p22okhii7yf" path="res://Scripts/bat.gd" id="1_jckqh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jckqh"]
 atlas = ExtResource("1_j7be8")
@@ -60,9 +61,11 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_h8o1q"]
-radius = 8.0
+radius = 11.352924
 
 [node name="bat" type="Area2D"]
+scale = Vector2(3, 3)
+script = ExtResource("1_jckqh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_c4xfn")

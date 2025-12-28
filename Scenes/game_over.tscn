@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://ypkvnn85gvcj"]
+
+[ext_resource type="FontFile" uid="uid://bcasbqth5l5ed" path="res://Assets/VCR_OSD_MONO_1.001.ttf" id="1_ojehl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8fo1c"]
+bg_color = Color(0.38178536, 0.5889781, 0.3797953, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ojehl"]
+bg_color = Color(0.1921013, 0.6632375, 0.77694696, 1)
+
+[node name="GameOver" type="CanvasLayer"]
+
+[node name="Button" type="Button" parent="."]
+offset_left = 451.0
+offset_top = 296.5
+offset_right = 701.0
+offset_bottom = 351.5
+theme_override_fonts/font = ExtResource("1_ojehl")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_8fo1c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ojehl")
+text = "Restart"
